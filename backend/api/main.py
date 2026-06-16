@@ -75,7 +75,7 @@ async def health():
     }
 
 
-@app.get("/", tags=["System"])
+@app.api_route("/", methods=["GET", "HEAD"], tags=["System"])
 async def root():
     return {
         "message": "SportsMind API is running. Visit /docs for the interactive API documentation.",
